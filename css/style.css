@@ -1,455 +1,218 @@
-h4,
-h5,
-h6,
-h1,
-h2,
-h3 {
-    margin-top: 0;
+@font-face{
+    font-family: 'Muncie';
+    src: url(../fonts/Muncie.ttf);
 }
 
-ul,
-ol {
-    margin: 0;
+* {
+    box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
-p {
-    margin: 0;
+body{
+    min-height: 100%;
+    position: relative;
+    margin: 0px;
+    background-color:#282828;
 }
 
-html,
-body {
-    font-family: 'Lato', sans-serif;
-    font-size: 100%;
-    background: #FFf;
-}
-
-body a {
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-}
-
-.header {
-    /*background: url(../images/banner.jpeg) no-repeat;
-    background-size: cover;
+.background-container{
+    background: url(../images/4.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;*/
-    min-height: 40vh;
-    max-height: 40vh;
-    text-align: center;
-    width: auto;
-}
-
-canvas {
-    max-height: 40vh;
-}
-
-#particles-js {
-    top: 0;
-    position: absolute;
-    width: 100%;
-    min-height: 40vh;
-    max-height: 40vh;
-    background-color: #222222;
-    background-image: url("");
-    background-repeat: no-repeat;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: 50% 50%;
+    background-color:rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
 }
 
-.offset-card {
-    background-color: #fff;
+.main-container{
     position: absolute;
     top: 20vh;
-    left: 0;
-    right: 0;
-    width: 45vw;
-    max-width: 800px;
-    -webkit-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.75);
+    width: 100%;
 }
 
-.header h1 {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    font-weight: 400;
-    letter-spacing: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.header h2 {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: 400;
-    letter-spacing: 10px;
-    text-align: center;
-}
-
-.header p {
-    color: #555;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.8em;
-    width: 66%;
-    margin: 1em auto 3em;
-    text-align: center;
-}
-
-.header img {
+.center-container{
     margin-left: auto;
     margin-right: auto;
-    margin: 3em auto 1em;
-    width: 10vw;
+    max-width: max-content;
 }
 
-.section-title {
+img.logo{
     display: block;
-    color: #3c3c3c;
-    font-size: 1.5em;
-    font-weight: 800;
-    line-height: 24px;
-    margin: 0;
-    padding: 24px 0;
-    position: relative;
-    text-align: center;
-    margin-bottom: 1em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    width:50vw;
 }
 
-.section {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-}
-
-.section.first {
-    margin-top: 20vw;
-}
-
-.section p {
-    color: #555;
-    font-size: 1em;
-    line-height: 1.5em;
-    text-align: center;
-    font-weight: 400;
-}
-
-.section .container {
-    margin-bottom: 1.5em;
-}
-
-
-/*SKILLS GROUP*/
-
-.skills-group {
-    padding: 2%;
-}
-
-.skills-group h4 {}
-
-.skills-group .skill {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-
-/*JOB*/
-
-p.job-period {
-    text-align: left;
-}
-
-.align-left {
-    text-align: left !important;
-}
-
-
-/*LOCATION*/
-
-.location {
-    margin-bottom: 1em;
-}
-
-.location h4.place {
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.location p.state {
-    text-align: left;
-}
-
-.location p.country {
-    text-align: left;
-}
-
-
-/*SOCIAL*/
-
-#toTop {
-    display: none;
+.btn {
+    font-family: 'Muncie';
+    font-weight: normal;
+    font-size: 2em;
     text-decoration: none;
-    position: fixed;
-    bottom: 0px;
-    right: 10px;
-    overflow: hidden;
-    width: 48px;
-    height: 48px;
-    border: none;
-    text-indent: 100%;
-    background: url("../images/top.png") no-repeat 0px 0px;
-}
-
-/*FOOTER*/
-
-.footer{
-    background-color: #222;
     color: #fff;
-    height: 65px;
-    text-align: center;
-    line-height: 65px;
+    padding: 10px 30px 10px 30px;
+    border: solid #fff 2px;
 }
 
-/*OTHER*/
-
-.container-resume{
-    position: relative;
+.btn:hover{
+    background-color: #fff;
+    color: #282828;
 }
 
-.btn-resume{
-    display: block;
-    max-width: 30%;
-    background-color: #eb2c1d;
-    color: white;
-    text-decoration: none;
+/*
+    SIDE NAV HAMBURGER
+******************************************/
+
+.fixed-hamburger-container{
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+}
+
+.fixed-hamburger{
+    color: #fff;
+}
+
+/*
+    SIDE NAV
+******************************************/
+.side-nav{
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    left: 0;
+    background-color:#282828; 
+    color: #fff;
+    font-family: 'Muncie', sans-serif;
+    font-weight: lighter;
+    -webkit-transition: transform 600ms ease-in 0s;
+    -moz-transition: transform 600ms ease-in 0s;
+    transition: transform 600ms ease-in 0s;
+    z-index: 9999;
+}
+
+.side-nav.shown{
+    transform: translateX(0px);
+}
+
+.side-nav.hidden{
+    transform: translateX(-1000px);
+}
+
+.side-nav h1{
     text-align: center;
-    padding: 15px 20px 15px 20px;
-    border-radius: 25px;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.side-nav ul{
+    list-style-type: none;
+}
+
+.side-nav ul li{
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+.copyright{
+    color: #6b6b6b;
+    position: absolute;
+    bottom: 8px;
+    text-align: center;
+    font-size: 1.4em;
+    width: 100%;
+}
+
+.overlay-panel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 999;
+}
+
+/*
+    CONTACT MENU
+******************************************/
+
+.contact-wrapper{
+    z-index: 997;
+    position: fixed;
+    width: 100%;
+    bottom: 60px;
+    margin: 0px;
+}
+
+.contact{
     margin-left: auto;
     margin-right: auto;
-    -moz-text-transform: uppercase;
-    -webkit-text-transform: uppercase;
-    text-transform: uppercase;
+    max-width: max-content;
 }
 
-.btn-resume:hover{
-    color: white;
+.contact a{
     text-decoration: none;
-    background-color: #ff3625;
+    color: #fff;
+    font-family: 'Muncie';
+    font-weight: normal;
+    font-size: 1.6em;
 }
 
-.btn-resume:focus{
-    color: white;
-    text-decoration: none;
-    background-color: #ff3625;
+.contact a:not(:nth-last-of-type(1))::after{
+    content: ' - ';
 }
 
-/*UTILS*/
 
-.invisible{
-    visibility: hidden !important;
-}
 
 
 /*--responsive design--*/
 
-@media (max-width:1024px) {
-    .header h1 {
-        font-size: 2.5em;
+@media (min-width: 1600px) {
+    img.logo{
+        width:50vw;
     }
-    .header h2 {
+
+    .side-nav{
+        width: 35vw;
+    }
+
+    .contact a{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    img.logo{
+        width:80vw;
+    }
+
+    .side-nav{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 520px) {
+    img.logo{
+        width:80vw;
+    }
+
+    .side-nav{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    img.logo{
+        width:75vw;
+    }
+
+    .side-nav{
+        width: 80vw;
+    }
+
+    .contact a{
         font-size: 1.5em;
-    }
-    .header p {
-        font-size: 1em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 20vw;
-    }
-    .section.first {
-        margin-top: 40vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-}
-
-@media (max-width:920px) {
-    .header h1 {
-        font-size: 2.5em;
-    }
-    .header h2 {
-        font-size: 1.5em;
-    }
-    .header p {
-        font-size: 1em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 20vw;
-    }
-    .section.first {
-        margin-top: 50vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-    
-        .btn-resume{
-        max-width: 45%;
-    }
-}
-
-@media (max-width:640px) {
-    .header h1 {
-        font-size: 1.4em;
-    }
-    .header h2 {
-        font-size: 1.2em;
-    }
-    .header p {
-        font-size: 0.9em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 25vw;
-    }
-    .section.first {
-        margin-top: 50vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-    
-        .btn-resume{
-        max-width: 45%;
-    }
-}
-
-@media (max-width:480px) {
-    .header h1 {
-        font-size: 1.4em;
-    }
-    .header h2 {
-        font-size: 1em;
-    }
-    .header p {
-        font-size: 0.8em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 30vw;
-    }
-    .section.first {
-        margin-top: 70vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-    
-    .btn-resume{
-        max-width: 80%;
-    }
-}
-
-@media (max-width:420px) {
-    .header h1 {
-        font-size: 1.4em;
-    }
-    .header h2 {
-        font-size: 1em;
-    }
-    .header p {
-        font-size: 0.8em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 30vw;
-    }
-    .section.first {
-        margin-top: 90vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-    
-    .btn-resume{
-        max-width: 80%;
-    }
-}
-
-@media (max-width:375px) {
-    .header h1 {
-        font-size: 1.4em;
-    }
-    .header h2 {
-        font-size: 1em;
-    }
-    .header p {
-        font-size: 0.8em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 30vw;
-    }
-    .section.first {
-        margin-top: 105vw;
-    }
-    .offset-card {
-        top: 30vh;
-        width: 70vw;
-        height: auto;
-    }
-    
-    .btn-resume{
-        max-width: 90%;
-    }
-}
-
-@media (max-width:320px) {
-    .header h1 {
-        font-size: 1.5em;
-    }
-    .header h2 {
-        font-size: 1em;
-    }
-    .header p {
-        font-size: 0.8em;
-    }
-    .header img {
-        margin: 3em auto 1em;
-        width: 30vw;
-    }
-    .section.first {
-        margin-top: 245px;
-    }
-    .offset-card {
-        top: 60px;
-        width: 70vw;
-        height: auto;
-    }
-    
-    .btn-resume{
-        max-width: 90%;
     }
 }
